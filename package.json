@@ -1,6 +1,6 @@
 {
-  "name": "connected-react-router",
-  "version": "5.0.1",
+  "name": "@b2b-apps/connected-react-router",
+  "version": "5.0.2",
   "description": "A Redux binding for React Router v4",
   "main": "lib/index.js",
   "types": "./index.d.ts",
@@ -71,9 +71,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/supasate/connected-react-router.git"
+    "url": "git+https://github.com/supasate/connected-react-router.git"
   },
   "bugs": {
     "url": "https://github.com/supasate/connected-react-router/issues"
+  },
+  "homepage": "https://github.com/supasate/connected-react-router#readme",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }

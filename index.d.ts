@@ -1,6 +1,6 @@
-declare module 'connected-react-router' {
+declare module 'b2b-apps/connected-react-router' {
   import * as React from 'react';
-  import { Middleware, Reducer } from 'redux';
+  import { Middleware, Reducer, Store } from 'redux';
   import {
     History,
     Path,
