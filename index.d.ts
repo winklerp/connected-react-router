@@ -1,4 +1,4 @@
-declare module 'b2b-apps/connected-react-router' {
+
   import * as React from 'react';
   import { Middleware, Reducer, Store } from 'redux';
   import {
@@ -71,4 +71,4 @@ declare module 'b2b-apps/connected-react-router' {
     : Reducer<RouterState, LocationChangeAction>
 
   export function routerMiddleware(history: History): Middleware;
-}
+
