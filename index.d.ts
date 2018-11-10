@@ -11,6 +11,7 @@ declare module 'connected-react-router' {
 
   interface ConnectedRouterProps {
     history: History;
+    contextStore: Store<any>;
   }
   
   export type RouterActionType = 'POP' | 'PUSH' | 'REPLACE';

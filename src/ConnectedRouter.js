@@ -19,14 +19,22 @@ const createConnectedRouter = (structure) => {
 
       this.inTimeTravelling = false
 
+      let store;
+
+      if (context.store === undefined) {
+        store  = props.contextStore;
+      } else {
+        store = context.store;
+      }
+
       // Subscribe to store changes
-      this.unsubscribe = context.store.subscribe(() => {
+      this.unsubscribe = store.subscribe(() => {
         // Extract store's location
         const {
           pathname: pathnameInStore,
           search: searchInStore,
           hash: hashInStore,
-        } = toJS(getIn(context.store.getState(), ['router', 'location']))
+        } = toJS(getIn(store.getState(), ['router', 'location']))
         // Extract history's location
         const {
           pathname: pathnameInHistory,
@@ -81,7 +89,7 @@ const createConnectedRouter = (structure) => {
     store: PropTypes.shape({
       getState: PropTypes.func.isRequired,
       subscribe: PropTypes.func.isRequired,
-    }).isRequired,
+    }),
   }
 
   ConnectedRouter.propTypes = {
